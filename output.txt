@@ -1,0 +1,120 @@
+
+C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests>cls
+
+C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests>".nuget\NuGet.exe" "Install" "FAKE" "-OutputDirectory" "packages" "-ExcludeVersion" "-Source" "https://api.nuget.org/v3/index.json" 
+Feeds used:
+  https://api.nuget.org/v3/index.json
+
+Attempting to gather dependencies information for package 'FAKE.4.37.2' with respect to project 'packages', targeting 'Any,Version=v0.0'
+Attempting to resolve dependencies for package 'FAKE.4.37.2' with DependencyBehavior 'Lowest'
+Resolving actions to install package 'FAKE.4.37.2'
+Resolved actions to install package 'FAKE.4.37.2'
+Adding package 'FAKE.4.37.2' to folder 'C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages'
+Added package 'FAKE.4.37.2' to folder 'C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages'
+Successfully installed 'FAKE 4.37.2' to packages
+
+C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests>"packages\FAKE\tools\Fake.exe" build.fsx 
+Building project with version: LocalBuild
+Shortened DependencyGraph for Target RunFeatureTests:
+<== RunFeatureTests
+   <== BuildFeatureTests
+      <== SetVersion
+         <== RestorePackages
+            <== Clean
+
+The resulting target order is:
+ - Clean
+ - RestorePackages
+ - SetVersion
+ - BuildFeatureTests
+ - RunFeatureTests
+Starting Target: Clean 
+Deleting contents of C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build
+Deleting contents of C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\artifacts
+Finished Target: Clean
+Starting Target: RestorePackages (==> Clean)
+C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\.nuget\nuget.exe "restore" "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\ExampleBrowserFeatureTests.sln" "-OutputDirectory" "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages"
+MSBuild auto-detection: using msbuild version '14.0' from 'C:\Program Files (x86)\MSBuild\14.0\bin'.
+All packages listed in packages.config are already installed.
+Finished Target: RestorePackages
+Starting Target: SetVersion (==> RestorePackages)
+This build is version 0.0.0.0. Changeset Unknown
+Finished Target: SetVersion
+Starting Target: BuildFeatureTests (==> SetVersion)
+Building project: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\Example.Ui.FeatureTests\Example.Ui.FeatureTests.csproj
+  C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe  "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\Example.Ui.FeatureTests\Example.Ui.FeatureTests.csproj" /t:Build /m      /p:RestorePackages="False" /p:OutputPath="C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build" /p:Configuration="Release" /logger:Fake.MsBuildLogger+ErrorLogger,"C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\FAKE\tools\FakeLib.dll"
+C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe  "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\Example.Ui.FeatureTests\Example.Ui.FeatureTests.csproj" /t:Build /m      /p:RestorePackages="False" /p:OutputPath="C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build" /p:Configuration="Release" /logger:Fake.MsBuildLogger+ErrorLogger,"C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\FAKE\tools\FakeLib.dll"
+Microsoft (R) Build Engine version 14.0.25420.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 19/08/2016 13:10:46.
+     1>Project "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\Example.Ui.FeatureTests\Example.Ui.FeatureTests.csproj" on node 1 (Build target(s)).
+     1>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       _CopyFilesMarkedCopyLocal:
+         Copying file from "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll".
+         Copying file from "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\TechTalk.SpecFlow.dll".
+         Copying file from "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\WebDriver.dll".
+         Copying file from "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.xml" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\WebDriver.xml".
+       _CopyOutOfDateSourceItemsToOutputDirectory:
+         Copying file from "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\WebDriver.ChromeDriver.win32.2.23.0.0\content\chromedriver.exe" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\chromedriver.exe".
+         Copying file from "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\packages\WebDriver.IEDriverServer.win32.2.53\content\IEDriverServer.exe" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\IEDriverServer.exe".
+       _CopyAppConfigFile:
+         Copying file from "App.config" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll.config".
+       CopyFilesToOutputDirectory:
+         Copying file from "obj\Release\Example.Ui.FeatureTests.dll" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll".
+         Example.Ui.FeatureTests -> C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll
+         Copying file from "obj\Release\Example.Ui.FeatureTests.pdb" to "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.pdb".
+     1>Done Building Project "C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\Example.Ui.FeatureTests\Example.Ui.FeatureTests.csproj" (Build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.29
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\chromedriver.exe
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll.config
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.pdb
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\IEDriverServer.exe
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\TechTalk.SpecFlow.dll
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\WebDriver.dll
+BuildFeatureTests-Output: C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\WebDriver.xml
+Finished Target: BuildFeatureTests
+Starting Target: RunFeatureTests (==> BuildFeatureTests)
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\mstest.exe "/testcontainer:C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll" "/resultsfile:C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\artifacts\20160819-131053.59.trx" "/noisolation" 
+Microsoft (R) Test Execution Command Line Tool Version 14.0.23107.0
+Copyright (c) Microsoft Corporation. All rights reserved.
+    
+Loading C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\build\Example.Ui.FeatureTests.dll...
+Starting execution...
+
+Results               Top Level Tests
+-------               ---------------
+Failed                Example.Ui.FeatureTests.Features.GoogleHomePageFeature.GoogleHomepageShouldIncludeASearchBox
+0/1 test(s) Passed, 1 Failed
+
+Summary
+-------
+Test Run Failed.
+  Failed  1
+  ---------
+  Total   1
+Results file:  C:\Users\tireynolds\Documents\Visual Studio 2015\Projects\ExampleBrowserFeatureTests\artifacts\20160819-131053.59.trx
+Test Settings: Default Test Settings
+
+---------------------------------------------------------------------
+Build Time Report
+---------------------------------------------------------------------
+Target              Duration
+------              --------
+Clean               00:00:00.0205537
+RestorePackages     00:00:00.4653923
+SetVersion          00:00:00.0027417
+BuildFeatureTests   00:00:07.4750063
+Total:              00:00:09.2433005
+---------------------------------------------------------------------
+---------------------------------------------------------------------
